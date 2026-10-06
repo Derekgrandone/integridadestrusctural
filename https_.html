@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ing. Derek Grandone Feliciano | Perfil Profesional - Ingeniería Mecánica</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Font: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#070a12',
+                            900: '#0b101d',
+                            800: '#131b2e',
+                            700: '#1e2942',
+                            600: '#2a3a5c'
+                        },
+                        steel: {
+                            100: '#f1f5f9',
+                            300: '#cbd5e1',
+                            500: '#64748b',
+                            700: '#334155',
+                            800: '#1e293b'
+                        },
+                        engine: {
+                            orange: '#f97316',
+                            amber: '#f59e0b',
+                            cobalt: '#0284c7',
+                            cyan: '#06b6d4'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #070a12;
+            color: #f1f5f9;
+        }
+
+        /* Industrial Grid Background Effect */
+        .bg-tech-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        .bg-radial-glow {
+            background: radial-gradient(circle at 50% 20%, rgba(2, 132, 199, 0.15) 0%, rgba(249, 115, 22, 0.05) 45%, transparent 70%);
+        }
+
+        /* Spinning Gear Animation */
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes spin-reverse-slow {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 25s linear infinite;
+        }
+        .animate-spin-reverse {
+            animation: spin-reverse-slow 20s linear infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b101d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e2942;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0284c7;
+        }
+
+        /* Glassmorphism Card Style */
+        .glass-panel {
+            background: rgba(19, 27, 46, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .glass-panel-hover:hover {
+            border-color: rgba(2, 132, 199, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.25);
+        }
+
+        .text-gradient-orange {
+            background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-blue {
+            background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-navy-950 text-steel-100 antialiased selection:bg-engine-orange selection:text-white bg-tech-grid">
+
+    <header class="sticky top-0 z-50 glass-panel border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-engine-cobalt to-navy-900 flex items-center justify-center border border-white/10 group-hover:border-engine-orange transition-colors">
+                    <i class="fa-solid fa-gear text-engine-orange text-xl animate-spin-slow"></i>
+                </div>
+                <div>
+                    <span class="text-lg font-bold tracking-tight text-white block leading-tight group-hover:text-engine-orange transition-colors">Derek Grandone</span>
+                    <span class="text-xs font-mono text-engine-cobalt uppercase tracking-widest block">Ingeniero Mecánico</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-1 lg:gap-2 text-sm font-medium">
+                <a href="#about" class="px-3 py-2 rounded-md hover:bg-white/5 hover:text-engine-orange transition-colors">Sobre Mí</a>
+                <a href="#experience" class="px-3 py-2 rounded-md hover:bg-white/5 hover:text-engine-orange transition-colors">Experiencia</a>
+                <a href="#skills" class="px-3 py-2 rounded-md hover:bg-white/5 hover:text-engine-orange transition-colors">Habilidades</a>
+                <a href="#projects" class="px-3 py-2 rounded-md hover:bg-white/5 hover:text-engine-orange transition-colors">Portafolio</a>
+                <a href="#ai-consulting" class="px-3 py-2 rounded-md bg-engine-cobalt/20 text-sky-400 border border-engine-cobalt/40 hover:bg-engine-cobalt hover:text-white transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-robot text-engine-orange"></i> Consultas IA
+                </a>
+                <a href="#contact" class="ml-2 px-4 py-2 rounded-lg bg-gradient-to-r from-engine-orange to-amber-600 text-white font-semibold hover:shadow-lg hover:shadow-engine-orange/20 transition-all">Contacto</a>
+            </nav>
+
+            <!-- Mobile Hamburger Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg bg-navy-800 border border-white/10 text-gray-300 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobileMenu" class="hidden md:hidden glass-panel border-t border-white/10 px-4 pt-2 pb-6 space-y-2">
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-navy-800 hover:text-engine-orange">Sobre Mí</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-navy-800 hover:text-engine-orange">Experiencia & Educación</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-navy-800 hover:text-engine-orange">Habilidades Técnicas</a>
+            <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-navy-800 hover:text-engine-orange">Portafolio</a>
+            <a href="#ai-consulting" class="block px-3 py-2 rounded-md text-base font-medium bg-engine-cobalt/20 text-sky-300 border border-engine-cobalt/30">
+                <i class="fa-solid fa-robot text-engine-orange mr-2"></i> Consultas de Ingeniería Mecánica
+            </a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium bg-engine-orange text-white text-center font-semibold">Contacto Directo</a>
+        </div>
+    </header>
+
+    <section id="hero" class="relative min-h-[calc(100vh-80px)] flex items-center py-16 overflow-hidden bg-radial-glow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Executive Summary & CTAs -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-engine-cobalt/10 border border-engine-cobalt/30 text-sky-400 text-xs font-mono font-medium tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                        DISPONIBLE PARA CONSULTORÍA & PROYECTOS TÉCNICOS
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-none">
+                        Ing. Derek <br class="hidden sm:block">
+                        <span class="text-gradient-orange">Grandone Feliciano</span>
+                    </h1>
+
+                    <p class="text-xl sm:text-2xl font-mono text-steel-300 font-light">
+                        Ingeniero Mecánico | Especialista en Termofluidos, FEA/CFD y Diseño CAD 3D
+                    </p>
+
+                    <p class="text-steel-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Apasionado por la innovación tecnológica, la optimización energética y el modelado físico avanzado. Experiencia integral en análisis de esfuerzos de estructuras, dinámica de fluidos computacional, mecatrónica y desarrollo de elementos de máquinas de alta eficiencia.
+                    </p>
+
+                    <!-- Key Stat Badges -->
+                    <div class="grid grid-cols-3 gap-4 pt-2 pb-2 max-w-lg mx-auto lg:mx-0">
+                        <div class="glass-panel p-3 rounded-xl text-center">
+                            <span class="text-2xl font-extrabold text-white block">100+</span>
+                            <span class="text-xs text-steel-500 font-mono">Análisis FEA/CFD</span>
+                        </div>
+                        <div class="glass-panel p-3 rounded-xl text-center">
+                            <span class="text-2xl font-extrabold text-engine-orange block">CAD 3D</span>
+                            <span class="text-xs text-steel-500 font-mono">Expertise SolidWorks</span>
+                        </div>
+                        <div class="glass-panel p-3 rounded-xl text-center">
+                            <span class="text-2xl font-extrabold text-sky-400 block">FE / EIT</span>
+                            <span class="text-xs text-steel-500 font-mono">Licencia Certificada</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#ai-consulting" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-engine-cobalt to-sky-600 hover:from-sky-500 hover:to-engine-cobalt text-white font-semibold flex items-center gap-3 shadow-lg shadow-sky-500/20 transition-all hover:-translate-y-0.5">
+                            <i class="fa-solid fa-microchip text-engine-orange text-lg"></i>
+                            <span>Hacer Consulta de Ingeniería (IA)</span>
+                        </a>
+                        
+                        <button onclick="downloadCV()" class="px-6 py-3.5 rounded-xl glass-panel hover:bg-white/10 text-white font-semibold flex items-center gap-2 border border-white/15 transition-all hover:-translate-y-0.5">
+                            <i class="fa-solid fa-file-arrow-down text-engine-orange"></i>
+                            <span>Descargar CV</span>
+                        </button>
+                        
+                        <a href="#contact" class="px-6 py-3.5 rounded-xl bg-navy-800 hover:bg-navy-700 text-steel-300 font-semibold border border-white/10 transition-all">
+                            Contacto
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Profile Graphic -->
+                <div class="lg:col-span-5 flex justify-center relative">
+                    <!-- Background Animated Blueprint Circles -->
+                    <div class="absolute -z-10 w-72 h-72 sm:w-96 sm:h-96 rounded-full border border-sky-500/20 animate-spin-slow flex items-center justify-center">
+                        <div class="w-56 h-56 rounded-full border border-dashed border-engine-orange/30 animate-spin-reverse"></div>
+                    </div>
+
+                    <!-- Profile Card Badge -->
+                    <div class="w-full max-w-sm glass-panel p-6 rounded-2xl border border-white/15 relative shadow-2xl shadow-navy-950/80">
+                        <div class="relative w-48 h-48 mx-auto mb-6 rounded-2xl overflow-hidden border-2 border-engine-cobalt/50 bg-gradient-to-b from-navy-800 to-navy-950 flex items-center justify-center group shadow-inner">
+                            
+                            <!-- Placeholder Mechanical Engineer Avatar Graphic -->
+                            <div class="text-center p-4">
+                                <div class="w-24 h-24 mx-auto mb-2 rounded-full bg-gradient-to-tr from-engine-orange to-amber-500 flex items-center justify-center shadow-lg">
+                                    <i class="fa-solid fa-user-gear text-4xl text-navy-950"></i>
+                                </div>
+                                <span class="text-xs font-mono text-sky-300 uppercase tracking-wider block">Ing. D. Grandone</span>
+                            </div>
+
+                            <!-- Decorative HUD Corner Accents -->
+                            <div class="absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-engine-orange"></div>
+                            <div class="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-engine-orange"></div>
+                            <div class="absolute bottom-2 left-2 w-3 h-3 border-b-2 border-l-2 border-engine-orange"></div>
+                            <div class="absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-engine-orange"></div>
+                        </div>
+
+                        <!-- Info Badges -->
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between p-2.5 rounded-lg bg-navy-900/80 text-xs font-mono border border-white/5">
+                                <span class="text-steel-400"><i class="fa-solid fa-compass-drafting text-engine-orange mr-2"></i>Especialidad:</span>
+                                <span class="text-white font-semibold">Diseño & Físicas</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg bg-navy-900/80 text-xs font-mono border border-white/5">
+                                <span class="text-steel-400"><i class="fa-solid fa-graduation-cap text-sky-400 mr-2"></i>Grado:</span>
+                                <span class="text-white font-semibold">BS Mech. Engineering</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded-lg bg-navy-900/80 text-xs font-mono border border-white/5">
+                                <span class="text-steel-400"><i class="fa-solid fa-location-dot text-rose-400 mr-2"></i>Ubicación:</span>
+                                <span class="text-white font-semibold">Puerto Rico / Remoto</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-navy-900/60 border-y border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-engine-orange uppercase tracking-widest mb-2"><i class="fa-solid fa-circle-nodes mr-2"></i>Sobre Mí & Resumen Ejecutivo</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white">Ingeniería de Precisión, Innovación e Integridad Estructural</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Core Competency Card 1 -->
+                <div class="glass-panel p-6 rounded-2xl glass-panel-hover transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-engine-orange/10 border border-engine-orange/30 flex items-center justify-center text-engine-orange text-2xl mb-4">
+                        <i class="fa-solid fa-cube"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Diseño CAD 3D & Paramétrico</h3>
+                    <p class="text-steel-300 text-sm leading-relaxed">
+                        Desarrollo de modelos complejas de ensamblaje en SolidWorks y Fusion 360, optimización de tolerancia dimensional (GD&T) y preparación de planos listos para manufactura CNC / Impresión 3D industrial.
+                    </p>
+                </div>
+
+                <!-- Core Competency Card 2 -->
+                <div class="glass-panel p-6 rounded-2xl glass-panel-hover transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 text-2xl mb-4">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Termofluidos y Dinámica</h3>
+                    <p class="text-steel-300 text-sm leading-relaxed">
+                        Análisis riguroso de ciclos termodinámicos, transferencia de calor por conducción, convección y radiación, cálculo de redes de tuberías, bombas e intercambiadores térmicos HVAC.
+                    </p>
+                </div>
+
+                <!-- Core Competency Card 3 -->
+                <div class="glass-panel p-6 rounded-2xl glass-panel-hover transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-2xl mb-4">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Simulación FEA & CFD</h3>
+                    <p class="text-steel-300 text-sm leading-relaxed">
+                        Validación virtual estática, dinámica y de fatiga en estructuras mediante ANSYS y SolidWorks Simulation. Estudio de flujo de fluidos aerodinámicos e hidrodinámicos con simulación CFD.
+                    </p>
+                </div>
+
+                <!-- Core Competency Card 4 -->
+                <div class="glass-panel p-6 rounded-2xl glass-panel-hover transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl mb-4">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Mecatrónica y Automatización</h3>
+                    <p class="text-steel-300 text-sm leading-relaxed">
+                        Integración de sensores, actuadores neumáticos/hidráulicos, microcontroladores (Arduino/Raspberry Pi) y programación de lógica de control de procesos en MATLAB/Simulink y Python.
+                    </p>
+                </div>
+
+                <!-- Core Competency Card 5 -->
+                <div class="glass-panel p-6 rounded-2xl glass-panel-hover transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl mb-4">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Selección de Materiales & Manufactura</h3>
+                    <p class="text-steel-300 text-sm leading-relaxed">
+                        Análisis de propiedades mecánicas, criterios de falla (Von Mises, Tresca), tratamientos térmicos y selección optimizada de aleaciones metálicas y polímeros según costo y rendimiento.
+                    </p>
+                </div>
+
+                <!-- Core Competency Card 6 -->
+                <div class="glass-panel p-6 rounded-2xl glass-panel-hover transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 text-2xl mb-4">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Gestión de Proyectos de Ingeniería</h3>
+                    <p class="text-steel-300 text-sm leading-relaxed">
+                        Supervisión técnica de obras y diseño industrial, aseguramiento de normativas ASHRAE, ASME y ASTM, control de calidad, evaluación de riesgos y optimización de costos de producción.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-sky-400 uppercase tracking-widest mb-2"><i class="fa-solid fa-timeline mr-2"></i>Trayectoria</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white">Experiencia Profesional y Formación Académica</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Experience Column -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-8 flex items-center gap-3">
+                        <span class="p-2 rounded-lg bg-engine-orange/20 text-engine-orange"><i class="fa-solid fa-briefcase"></i></span>
+                        Experiencia Profesional
+                    </h3>
+
+                    <div class="space-y-6 border-l-2 border-engine-cobalt/30 ml-4 pl-6 relative">
+                        <!-- Timeline Item 1 -->
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-navy-950 border-2 border-engine-orange group-hover:scale-125 transition-transform"></div>
+                            <div class="glass-panel p-5 rounded-xl border border-white/10">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div>
+                                        <h4 class="text-lg font-bold text-white">Ingeniero Mecánico Senior de Diseño</h4>
+                                        <p class="text-sm text-sky-400 font-mono">Consultoría Tecnológica & Automatización</p>
+                                    </div>
+                                    <span class="text-xs font-mono bg-white/5 px-2.5 py-1 rounded text-steel-300">2023 - Presente</span>
+                                </div>
+                                <ul class="text-sm text-steel-300 space-y-2 mt-3 list-disc list-inside">
+                                    <li>Liderazgo en modelado CAD de equipos industriales y líneas de ensamble automatizadas.</li>
+                                    <li>Validación mediante simulación FEA/CFD reduciendo los tiempos de prototipado físico en un 35%.</li>
+                                    <li>Redacción de memorias de cálculo de transferencia de calor para sistemas HVAC y tuberías de procesos.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 2 -->
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-navy-950 border-2 border-engine-cobalt group-hover:scale-125 transition-transform"></div>
+                            <div class="glass-panel p-5 rounded-xl border border-white/10">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div>
+                                        <h4 class="text-lg font-bold text-white">Especialista en Proyectos de Termofluidos</h4>
+                                        <p class="text-sm text-sky-400 font-mono">Servicios de Ingeniería Energética</p>
+                                    </div>
+                                    <span class="text-xs font-mono bg-white/5 px-2.5 py-1 rounded text-steel-300">2021 - 2023</span>
+                                </div>
+                                <ul class="text-sm text-steel-300 space-y-2 mt-3 list-disc list-inside">
+                                    <li>Análisis de eficiencia térmica en plantas industriales y dimensionamiento de calderas y bombas.</li>
+                                    <li>Aplicación de la ecuación de Bernoulli, pérdidas de carga (Darcy-Weisbach) y selección de intercambiadores de calor.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education & Certifications Column -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-8 flex items-center gap-3">
+                        <span class="p-2 rounded-lg bg-sky-500/20 text-sky-400"><i class="fa-solid fa-graduation-cap"></i></span>
+                        Educación & Licencias
+                    </h3>
+
+                    <div class="space-y-6">
+                        <!-- Education Card 1 -->
+                        <div class="glass-panel p-5 rounded-xl border border-white/10 flex gap-4 items-start">
+                            <div class="p-3 rounded-lg bg-navy-800 text-engine-orange text-2xl border border-white/10 shrink-0">
+                                <i class="fa-solid fa-university"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Bachillerato en Ciencias de la Ingeniería Mecánica (BSME)</h4>
+                                <p class="text-sm text-sky-400 font-mono">Acreditado por ABET</p>
+                                <p class="text-xs text-steel-400 mt-2">Enfoque avanzado en Mecánica del Sólido, Termodinámica de Procesos, Mecánica de Fluidos y Control Mecatrónico.</p>
+                            </div>
+                        </div>
+
+                        <!-- Certification Grid -->
+                        <h4 class="text-sm font-mono text-steel-400 uppercase tracking-wider pt-2">Certificaciones Profesionales</h4>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="glass-panel p-4 rounded-xl border border-white/10 flex items-center gap-3">
+                                <i class="fa-solid fa-certificate text-engine-orange text-xl"></i>
+                                <div>
+                                    <p class="text-sm font-bold text-white">SolidWorks CSWP</p>
+                                    <p class="text-xs text-steel-400">Certified Mechanical Design</p>
+                                </div>
+                            </div>
+
+                            <div class="glass-panel p-4 rounded-xl border border-white/10 flex items-center gap-3">
+                                <i class="fa-solid fa-award text-sky-400 text-xl"></i>
+                                <div>
+                                    <p class="text-sm font-bold text-white">FE / EIT License</p>
+                                    <p class="text-xs text-steel-400">Fundamentals of Engineering</p>
+                                </div>
+                            </div>
+
+                            <div class="glass-panel p-4 rounded-xl border border-white/10 flex items-center gap-3">
+                                <i class="fa-solid fa-gears text-purple-400 text-xl"></i>
+                                <div>
+                                    <p class="text-sm font-bold text-white">ANSYS Mechanical FEA</p>
+                                    <p class="text-xs text-steel-400">Structural Specialist</p>
+                                </div>
+                            </div>
+
+                            <div class="glass-panel p-4 rounded-xl border border-white/10 flex items-center gap-3">
+                                <i class="fa-solid fa-code text-emerald-400 text-xl"></i>
+                                <div>
+                                    <p class="text-sm font-bold text-white">MATLAB & Simulink</p>
+                                    <p class="text-xs text-steel-400">Control System Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-navy-900/60 border-y border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-engine-orange uppercase tracking-widest mb-2"><i class="fa-solid fa-screwdriver-wrench mr-2"></i>Herramientas & Conocimiento</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white">Dominio Técnico y Software de Ingeniería</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Software & CAD Tools -->
+                <div class="glass-panel p-6 rounded-2xl">
+                    <h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-laptop-code text-engine-orange"></i> Software Especializado & CAD/CAE
+                    </h3>
+
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm font-mono mb-1">
+                                <span class="text-steel-200">SolidWorks (3D CAD & Simulation)</span>
+                                <span class="text-engine-orange font-bold">95%</span>
+                            </div>
+                            <div class="w-full bg-navy-950 h-2.5 rounded-full overflow-hidden border border-white/5">
+                                <div class="bg-gradient-to-r from-engine-orange to-amber-500 h-full rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm font-mono mb-1">
+                                <span class="text-steel-200">ANSYS Workbench (FEA & CFD)</span>
+                                <span class="text-sky-400 font-bold">88%</span>
+                            </div>
+                            <div class="w-full bg-navy-950 h-2.5 rounded-full overflow-hidden border border-white/5">
+                                <div class="bg-gradient-to-r from-sky-500 to-engine-cobalt h-full rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm font-mono mb-1">
+                                <span class="text-steel-200">AutoCAD Mechanical</span>
+                                <span class="text-steel-300 font-bold">90%</span>
+                            </div>
+                            <div class="w-full bg-navy-950 h-2.5 rounded-full overflow-hidden border border-white/5">
+                                <div class="bg-gradient-to-r from-steel-500 to-steel-300 h-full rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm font-mono mb-1">
+                                <span class="text-steel-200">MATLAB / Simulink</span>
+                                <span class="text-purple-400 font-bold">85%</span>
+                            </div>
+                            <div class="w-full bg-navy-950 h-2.5 rounded-full overflow-hidden border border-white/5">
+                                <div class="bg-gradient-to-r from-purple-500 to-indigo-500 h-full rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm font-mono mb-1">
+                                <span class="text-steel-200">Python / LabVIEW (Control & Análisis)</span>
+                                <span class="text-emerald-400 font-bold">80%</span>
+                            </div>
+                            <div class="w-full bg-navy-950 h-2.5 rounded-full overflow-hidden border border-white/5">
+                                <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engineering Core Principles -->
+                <div class="glass-panel p-6 rounded-2xl">
+                    <h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-atom text-sky-400"></i> Fundamentos Físico-Mecánicos
+                    </h3>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="p-3.5 rounded-xl bg-navy-900/90 border border-white/10 hover:border-engine-cobalt/40 transition-colors">
+                            <i class="fa-solid fa-compress text-engine-orange mb-2 block text-lg"></i>
+                            <h4 class="text-sm font-bold text-white">Análisis de Esfuerzos</h4>
+                            <p class="text-xs text-steel-400 mt-1">Criterios Von Mises, fatiga y concentración de tensiones.</p>
+                        </div>
+
+                        <div class="p-3.5 rounded-xl bg-navy-900/90 border border-white/10 hover:border-engine-cobalt/40 transition-colors">
+                            <i class="fa-solid fa-temperature-arrow-up text-sky-400 mb-2 block text-lg"></i>
+                            <h4 class="text-sm font-bold text-white">Termodinámica Aplicada</h4>
+                            <p class="text-xs text-steel-400 mt-1">Ciclos de potencia (Rankine, Brayton) y refrigeración.</p>
+                        </div>
+
+                        <div class="p-3.5 rounded-xl bg-navy-900/90 border border-white/10 hover:border-engine-cobalt/40 transition-colors">
+                            <i class="fa-solid fa-water text-cyan-400 mb-2 block text-lg"></i>
+                            <h4 class="text-sm font-bold text-white">Mecánica de Fluidos</h4>
+                            <p class="text-xs text-steel-400 mt-1">Flujo incompresible, tuberías, bombas y cavitación.</p>
+                        </div>
+
+                        <div class="p-3.5 rounded-xl bg-navy-900/90 border border-white/10 hover:border-engine-cobalt/40 transition-colors">
+                            <i class="fa-solid fa-[#000] fa-fan text-emerald-400 mb-2 block text-lg"></i>
+                            <h4 class="text-sm font-bold text-white">Sistemas HVAC</h4>
+                            <p class="text-xs text-steel-400 mt-1">Cálculo de cargas térmicas y psicrometría.</p>
+                        </div>
+
+                        <div class="p-3.5 rounded-xl bg-navy-900/90 border border-white/10 hover:border-engine-cobalt/40 transition-colors">
+                            <i class="fa-solid fa-cogs text-purple-400 mb-2 block text-lg"></i>
+                            <h4 class="text-sm font-bold text-white">Elementos de Máquinas</h4>
+                            <p class="text-xs text-steel-400 mt-1">Engranajes, rodamientos, ejes y acoplamientos.</p>
+                        </div>
+
+                        <div class="p-3.5 rounded-xl bg-navy-900/90 border border-white/10 hover:border-engine-cobalt/40 transition-colors">
+                            <i class="fa-solid fa-robot text-amber-400 mb-2 block text-lg"></i>
+                            <h4 class="text-sm font-bold text-white">Control Mecatrónico</h4>
+                            <p class="text-xs text-steel-400 mt-1">Sistemas retroalimentados PID y neumática.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-mono text-sky-400 uppercase tracking-widest mb-2"><i class="fa-solid fa-folder-open mr-2"></i>Proyectos Destacados</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white">Portafolio de Ingeniería Mecánica</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12" id="portfolioFilter">
+                <button onclick="filterPortfolio('all')" class="px-4 py-2 rounded-xl bg-engine-orange text-white font-medium text-sm transition-all filter-btn">Todos</button>
+                <button onclick="filterPortfolio('cad')" class="px-4 py-2 rounded-xl glass-panel text-steel-300 hover:text-white font-medium text-sm transition-all filter-btn">Diseño CAD 3D</button>
+                <button onclick="filterPortfolio('thermo')" class="px-4 py-2 rounded-xl glass-panel text-steel-300 hover:text-white font-medium text-sm transition-all filter-btn">Termofluidos</button>
+                <button onclick="filterPortfolio('fea')" class="px-4 py-2 rounded-xl glass-panel text-steel-300 hover:text-white font-medium text-sm transition-all filter-btn">Simulación FEA/CFD</button>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: Thermo/CFD -->
+                <div class="project-card glass-panel rounded-2xl overflow-hidden border border-white/10 hover:border-engine-cobalt/50 transition-all duration-300 group" data-category="thermo fea">
+                    <div class="h-48 bg-gradient-to-br from-navy-800 to-navy-950 relative flex items-center justify-center p-6 border-b border-white/10 group-hover:bg-navy-800/80 transition-colors">
+                        <i class="fa-solid fa-wind text-6xl text-sky-500/40 group-hover:scale-110 transition-transform"></i>
+                        <span class="absolute top-3 right-3 text-xs font-mono px-2.5 py-1 rounded-full bg-sky-500/20 text-sky-300 border border-sky-500/30">CFD & Térmico</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-engine-orange transition-colors">Optimización de Intercambiador de Calor de Tubos y Coraza</h3>
+                        <p class="text-steel-300 text-sm mb-4">Análisis térmico y simulación de dinámica de fluidos para maximizar la tasa de transferencia de calor disminuyendo la caída de presión en un 18%.</p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-steel-400">
+                            <span class="px-2 py-1 rounded bg-navy-900 border border-white/5">ANSYS Fluent</span>
+                            <span class="px-2 py-1 rounded bg-navy-900 border border-white/5">SolidWorks</span>
+                            <span class="px-2 py-1 rounded bg-navy-900 border border-white/5">Termodinámica</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: CAD 3D -->
+                <div class="project-card glass-panel rounded-2xl overflow-hidden border border-white/10 hover:border-engine-orange/50 transition-all duration-300 group" data-category="cad">
+                    <div class="h-48 bg-gradient-to-br from-navy-800 to-navy-950 relative flex items-center justify-center p-6 border-b border-white/10 group-hover:bg-navy-800/80 transition-colors">
+                        <i class="fa-solid fa-gears text-6xl text-engine-orange/40 group-hover:scale-110 transition-transform"></i>
+                        <span class="absolute top-3 right-3 text-xs font-mono px-2.5 py-1 rounded-full bg-engine-orange/20 text-engine-orange border border-engine-orange/30">Diseño CAD</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-engine-orange transition-colors">Caja de Engranajes Planetarios de Alta Reducción</h3>
+                        <p class="text-steel-300 text-sm mb-4">Diseño cinemático e integración paramétrica de reductor planetario para brazo robótico articulado con tolerancias GD&T estrictas.</p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-steel-400">
+                            <span class="px-2 py-1 rounded bg-navy-900 border border-white/5">SolidWorks CSWP</span>
+                            <span class="px-2 py-1 rounded bg-navy-900 border border-white/5">GD&T</span>
+                            <span class="px-2 py-1 rounded bg-navy-900 border border-white/5">Manufactura</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: FEA -->
+                <div class="project-card glass-panel rounded-2xl overflow-hidden border border-white/10 hover:border-purple-500/50 transition-all duration-300 group" data-category="fea">
+                    <div class="h-48 bg-gradient-to-br from-navy-800 to-navy-950 relative flex items-center justify-center p-6 border-b border-white/10 group-hover:bg-navy-800/80 transition-colors">
+                        <i class="fa-solid fa-bridge-water text-6xl text-purple-500/40 group-hover:scale-110 transition-transform"></i>
+                        <span class="absolute top-3 right-3 text-xs font-mono px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">Análisis FEA</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-engine-orange transition-colors">Evaluación Estratégica de Fatiga en Estructura Mecánica</h3>
+                        <p class="text-steel-300 text-sm mb-4">Simulación de esfuerzos estáticos y cíclicos para predecir la vida útil del chasis bajo cargas dinámicas usando el criterio de Von Mises.</p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-steel-400">
+                            <span class="px-2 py-1 rounded bg-navy-900 border border-white/5">ANSYS FEA</span>
+                            <span class="px-2 py-1 rounded bg-navy-900 border border-white/5">Resistencia Materiales</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-consulting" class="py-20 bg-radial-glow border-t border-white/10 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-engine-cobalt/20 border border-engine-cobalt/40 text-sky-300 text-xs font-mono mb-3">
+                    <i class="fa-solid fa-brain text-engine-orange"></i>
+                    ASISTENTE DE INGENIERÍA MECÁNICA INTEGRADO
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Consultas de Ingeniería Mecánica</h2>
+                <p class="text-steel-300 text-base mt-2">
+                    Escribe tu inquietud técnica (fórmulas, termodinámica, selección de materiales, fluidos, diseño de elementos) y recibe una respuesta fundamentada con el respaldo conceptual del despacho del **Ing. Derek Grandone Feliciano**.
+                </p>
+            </div>
+
+            <!-- Chat Interface Window -->
+            <div class="glass-panel rounded-2xl border border-white/15 overflow-hidden shadow-2xl shadow-navy-950/90">
+                
+                <!-- Window Header Bar -->
+                <div class="bg-navy-900 p-4 border-b border-white/10 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="relative">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-engine-cobalt to-sky-400 flex items-center justify-center font-bold text-navy-950">
+                                <i class="fa-solid fa-user-gear"></i>
+                            </div>
+                            <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-500 border-2 border-navy-900"></span>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                                Ing. Derek Grandone Feliciano <span class="text-xs text-engine-orange font-mono font-normal">(AI Consultor)</span>
+                            </h3>
+                            <p class="text-xs text-steel-400 font-mono">Respuesta asistida por modelo Gemini 3.1 Flash</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20">
+                            <i class="fa-solid fa-plug-circle-check mr-1"></i>En Línea
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Quick Prompt Chips -->
+                <div class="bg-navy-950/60 p-3 border-b border-white/5 overflow-x-auto flex items-center gap-2 text-xs">
+                    <span class="text-steel-400 font-mono text-nowrap mr-1"><i class="fa-solid fa-lightbulb text-amber-400 mr-1"></i>Sugerencias:</span>
+                    <button onclick="setPrompt('¿Cómo se calcula la pérdida de carga por fricción en una tubería usando Darcy-Weisbach?')" class="px-3 py-1.5 rounded-full bg-navy-800 hover:bg-navy-700 text-sky-300 border border-white/10 text-nowrap transition-colors">
+                        🌊 Pérdida por fricción
+                    </button>
+                    <button onclick="setPrompt('¿Cuál es la diferencia entre el criterio de falla de Von Mises y Tresca?')" class="px-3 py-1.5 rounded-full bg-navy-800 hover:bg-navy-700 text-engine-orange border border-white/10 text-nowrap transition-colors">
+                        ⚙️ Von Mises vs Tresca
+                    </button>
+                    <button onclick="setPrompt('Explica el ciclo Rankine con sobrecalentamiento y cómo mejorar su eficiencia térmica.')" class="px-3 py-1.5 rounded-full bg-navy-800 hover:bg-navy-700 text-purple-300 border border-white/10 text-nowrap transition-colors">
+                        🔥 Eficiencia Ciclo Rankine
+                    </button>
+                    <button onclick="setPrompt('¿Cómo seleccionar un rodamiento para soportar carga combinada radial y axial?')" class="px-3 py-1.5 rounded-full bg-navy-800 hover:bg-navy-700 text-emerald-300 border border-white/10 text-nowrap transition-colors">
+                        🔩 Selección de Rodamientos
+                    </button>
+                </div>
+
+                <!-- Chat History Window -->
+                <div id="chatHistory" class="p-6 h-[380px] overflow-y-auto space-y-4 font-sans text-sm">
+                    <!-- AI Initial Message -->
+                    <div class="flex gap-3 max-w-2xl">
+                        <div class="w-8 h-8 rounded-full bg-engine-cobalt flex items-center justify-center text-white shrink-0 mt-1">
+                            <i class="fa-solid fa-robot text-xs"></i>
+                        </div>
+                        <div class="bg-navy-800/90 p-4 rounded-2xl rounded-tl-none border border-white/10 text-steel-100 leading-relaxed space-y-2">
+                            <p class="font-bold text-sky-400 text-xs font-mono">Ing. Derek Grandone Feliciano (AI Desk):</p>
+                            <p>¡Saludos! Soy el asistente virtual especializado del **Ing. Derek Grandone Feliciano**.</p>
+                            <p>¿En qué tema de ingeniería mecánica te puedo ayudar hoy? Puedo asistirte con fórmulas de termodinámica, mecánica de fluidos, cálculo de esfuerzos, elementos finitos o criterios de diseño.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Typing / Loading Spinner (Hidden by default) -->
+                <div id="aiLoading" class="hidden px-6 py-2 bg-navy-950/40 text-xs font-mono text-engine-orange flex items-center gap-2">
+                    <i class="fa-solid fa-gear animate-spin text-sm"></i>
+                    <span>Analizando ecuaciones y consultando bases de ingeniería mecánica...</span>
+                </div>
+
+                <!-- Input Form -->
+                <form id="aiChatForm" onsubmit="handleAIConsultation(event)" class="p-4 bg-navy-900 border-t border-white/10 flex items-center gap-3">
+                    <input 
+                        type="text" 
+                        id="userPrompt" 
+                        placeholder="Escribe tu pregunta de ingeniería mecánica aquí..." 
+                        required 
+                        class="flex-1 bg-navy-950 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-steel-500 focus:outline-none focus:border-engine-cobalt font-sans text-sm"
+                    />
+                    <button 
+                        type="submit" 
+                        id="sendBtn"
+                        class="px-5 py-3 rounded-xl bg-gradient-to-r from-engine-orange to-amber-600 hover:from-amber-500 hover:to-engine-orange text-white font-semibold flex items-center gap-2 shadow-lg shadow-engine-orange/20 transition-all shrink-0">
+                        <span>Consultar</span>
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <h2 class="text-xs font-mono text-engine-orange uppercase tracking-widest mb-2"><i class="fa-solid fa-paper-plane mr-2"></i>Contacto Directo</h2>
+                        <p class="text-3xl font-extrabold text-white">Iniciemos un Proyecto o Consultoría</p>
+                    </div>
+
+                    <p class="text-steel-300 text-sm leading-relaxed">
+                        ¿Tienes una consulta técnica, requerimiento de diseño 3D o evaluación estructural? Ponte en contacto directamente con el Ing. Derek Grandone Feliciano.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="glass-panel p-4 rounded-xl border border-white/10 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-engine-orange/20 text-engine-orange flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-steel-400 font-mono">Correo Electrónico</p>
+                                <a href="mailto:derek.grandone@example.com" class="text-sm font-semibold text-white hover:text-engine-orange transition-colors">derek.grandone@example.com</a>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel p-4 rounded-xl border border-white/10 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center text-lg">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-steel-400 font-mono">Red Profesional</p>
+                                <a href="https://linkedin.com" target="_blank" class="text-sm font-semibold text-white hover:text-sky-400 transition-colors">LinkedIn / derek-grandone-feliciano</a>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel p-4 rounded-xl border border-white/10 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-steel-400 font-mono">Ubicación de Despacho</p>
+                                <p class="text-sm font-semibold text-white">Puerto Rico (Disponible para servicios remotos e internacionales)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Column -->
+                <div class="lg:col-span-7">
+                    <form onsubmit="handleContactSubmit(event)" class="glass-panel p-8 rounded-2xl border border-white/15 space-y-4">
+                        <h3 class="text-xl font-bold text-white mb-4">Enviar Mensaje</h3>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-mono text-steel-300 mb-1">Nombre Completo *</label>
+                                <input type="text" required placeholder="Ej. Carlos Rivera" class="w-full bg-navy-950 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder-steel-600 focus:outline-none focus:border-engine-orange text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono text-steel-300 mb-1">Correo Electrónico *</label>
+                                <input type="email" required placeholder="carlos@empresa.com" class="w-full bg-navy-950 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder-steel-600 focus:outline-none focus:border-engine-orange text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono text-steel-300 mb-1">Asunto de la Consulta</label>
+                            <input type="text" placeholder="Ej. Asesoría en Simulación FEA / Diseño Térmico" class="w-full bg-navy-950 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder-steel-600 focus:outline-none focus:border-engine-orange text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono text-steel-300 mb-1">Detalles del Proyecto o Pregunta *</label>
+                            <textarea rows="4" required placeholder="Describe los requerimientos técnicos..." class="w-full bg-navy-950 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder-steel-600 focus:outline-none focus:border-engine-orange text-sm resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-engine-orange to-amber-600 hover:from-amber-500 hover:to-engine-orange text-white font-bold shadow-lg shadow-engine-orange/20 transition-all">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 border-t border-white/10 py-8 text-center text-xs font-mono text-steel-500">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 Ing. Derek Grandone Feliciano. Todos los derechos reservados.</p>
+            <p class="flex items-center gap-2">
+                <span>Diseñado para Ingeniería Mecánica</span>
+                <i class="fa-solid fa-gear text-engine-orange"></i>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Custom Notification Toast Container -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 glass-panel border border-engine-orange/50 p-4 rounded-xl text-sm font-semibold text-white flex items-center gap-3 shadow-2xl">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+        <span id="toastMsg">Mensaje enviado exitosamente</span>
+    </div>
+
+    <script>
+        // Toggle Mobile Navigation Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars text-xl';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark text-xl';
+            }
+        });
+
+        // Close Mobile Menu on Click Link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fa-solid fa-bars text-xl';
+            });
+        });
+
+        // Portfolio Category Filter Logic
+        function filterPortfolio(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('#portfolioFilter button');
+
+            buttons.forEach(btn => {
+                btn.className = 'px-4 py-2 rounded-xl glass-panel text-steel-300 hover:text-white font-medium text-sm transition-all filter-btn';
+            });
+            event.target.className = 'px-4 py-2 rounded-xl bg-engine-orange text-white font-medium text-sm transition-all filter-btn';
+
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    const cardCategories = card.getAttribute('data-category');
+                    if (cardCategories.includes(category)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // Helper function for quick prompt chips
+        function setPrompt(text) {
+            document.getElementById('userPrompt').value = text;
+            document.getElementById('userPrompt').focus();
+        }
+
+        // Toast Notification System (replaces alerts)
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 4000);
+        }
+
+        // Simulated Download CV
+        function downloadCV() {
+            showToast("Iniciando descarga del Curriculum Vitae del Ing. Derek Grandone Feliciano...");
+        }
+
+        // Handle Contact Form Submit
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            showToast("¡Mensaje recibido! El Ing. Derek Grandone Feliciano se pondrá en contacto a la brevedad.");
+            event.target.reset();
+        }
+
+        // Helper function to format markdown bold and linebreaks cleanly
+        function formatEngineeringResponse(text) {
+            let formatted = text
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/`([^`]+)`/g, '<code class="bg-navy-950 px-1.5 py-0.5 rounded font-mono text-engine-orange text-xs">$1</code>')
+                .replace(/\n\n/g, '</p><p class="mt-2">')
+                .replace(/\n/g, '<br/>');
+            return `<p>${formatted}</p>`;
+        }
+
+        // =================================================================
+        // Gemini API Integration for "Consultas de Ingeniería Mecánica"
+        // =================================================================
+        async function handleAIConsultation(event) {
+            event.preventDefault();
+            const promptInput = document.getElementById('userPrompt');
+            const userText = promptInput.value.trim();
+            if(!userText) return;
+
+            const chatHistory = document.getElementById('chatHistory');
+            const aiLoading = document.getElementById('aiLoading');
+            const sendBtn = document.getElementById('sendBtn');
+
+            // 1. Render User Message
+            const userMsgHTML = `
+                <div class="flex gap-3 justify-end max-w-2xl ml-auto">
+                    <div class="bg-engine-cobalt/20 border border-engine-cobalt/40 p-4 rounded-2xl rounded-tr-none text-white leading-relaxed">
+                        <p class="font-bold text-sky-300 text-xs font-mono mb-1">Tú (Consulta):</p>
+                        <p>${userText.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-navy-800 border border-white/20 flex items-center justify-center text-steel-300 shrink-0 mt-1">
+                        <i class="fa-solid fa-user text-xs"></i>
+                    </div>
+                </div>
+            `;
+            chatHistory.insertAdjacentHTML('beforeend', userMsgHTML);
+            promptInput.value = '';
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+
+            // 2. Show loading state
+            aiLoading.classList.remove('hidden');
+            sendBtn.disabled = true;
+
+            // 3. Prepare Gemini API Payload
+            const systemPrompt = `Actúas como el Ingeniero Mecánico Derek Grandone Feliciano o el asistente técnico oficial de su firma. 
+Tu tarea es dar respuestas claras, técnicamente rigurosas, precisas y educativas en castellano/español sobre temas de Ingeniería Mecánica (termodinámica, resistencia de materiales, FEA/CFD, mecánica de fluidos, elementos de máquinas, transferencia de calor, HVAC y mecatrónica). 
+Usa ecuaciones escritas de manera limpia, explicaciones paso a paso y consejos prácticos de ingeniería. Mantén un tono sumamente profesional, experto y colaborativo.`;
+
+            const apiKey = ""; // API key populated by the Canvas runtime
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [
+                    {
+                        parts: [
+                            { text: userText }
+                        ]
+                    }
+                ],
+                systemInstruction: {
+                    parts: [
+                        { text: systemPrompt }
+                    ]
+                }
+            };
+
+            // Retry function with exponential backoff
+            async function fetchWithRetry(url, options, retries = 3, backoff = 1000) {
+                try {
+                    const res = await fetch(url, options);
+                    if (!res.ok) {
+                        if (res.status === 429 && retries > 0) {
+                            await new Promise(r => setTimeout(r, backoff));
+                            return fetchWithRetry(url, options, retries - 1, backoff * 2);
+                        }
+                        throw new Error(`HTTP Error ${res.status}`);
+                    }
+                    return await res.json();
+                } catch (err) {
+                    if (retries > 0) {
+                        await new Promise(r => setTimeout(r, backoff));
+                        return fetchWithRetry(url, options, retries - 1, backoff * 2);
+                    }
+                    throw err;
+                }
+            }
+
+            try {
+                const data = await fetchWithRetry(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const rawAnswer = data.candidates?.[0]?.content?.parts?.[0]?.text || "No se pudo obtener una respuesta técnica estructurada. Intente reformular su consulta.";
+                const formattedAnswer = formatEngineeringResponse(rawAnswer);
+
+                // 4. Render AI Response
+                const aiMsgHTML = `
+                    <div class="flex gap-3 max-w-2xl">
+                        <div class="w-8 h-8 rounded-full bg-engine-cobalt flex items-center justify-center text-white shrink-0 mt-1">
+                            <i class="fa-solid fa-robot text-xs"></i>
+                        </div>
+                        <div class="bg-navy-800/90 p-4 rounded-2xl rounded-tl-none border border-white/10 text-steel-100 leading-relaxed space-y-2">
+                            <p class="font-bold text-sky-400 text-xs font-mono">Ing. Derek Grandone Feliciano (AI Desk):</p>
+                            ${formattedAnswer}
+                        </div>
+                    </div>
+                `;
+                chatHistory.insertAdjacentHTML('beforeend', aiMsgHTML);
+
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                const errorMsgHTML = `
+                    <div class="flex gap-3 max-w-2xl">
+                        <div class="w-8 h-8 rounded-full bg-rose-600 flex items-center justify-center text-white shrink-0 mt-1">
+                            <i class="fa-solid fa-triangle-exclamation text-xs"></i>
+                        </div>
+                        <div class="bg-navy-800/90 p-4 rounded-2xl rounded-tl-none border border-rose-500/30 text-steel-200">
+                            <p class="font-bold text-rose-400 text-xs font-mono mb-1">Nota de Sistema:</p>
+                            <p>Ocurrió un inconveniente al conectar con el servidor de análisis. Por favor verifica tu conexión o intenta nuevamente más tarde.</p>
+                        </div>
+                    </div>
+                `;
+                chatHistory.insertAdjacentHTML('beforeend', errorMsgHTML);
+            } finally {
+                aiLoading.classList.add('hidden');
+                sendBtn.disabled = false;
+                chatHistory.scrollTop = chatHistory.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>
